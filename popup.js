@@ -8,7 +8,7 @@ document.getElementById("send").addEventListener("click", async () => {
     }
 
     try {
-        const res = await fetch("http://localhost:5000/send_reminder", {
+        const res = await fetch("https://chromewhatsappextension.onrender.com", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ phone, message })
@@ -24,3 +24,4 @@ document.getElementById("send").addEventListener("click", async () => {
         document.getElementById("status").innerText = "❌ Failed to connect to backend.";
     }
 });
+
